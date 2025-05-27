@@ -1,20 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roque Publicidade</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="redirecionamento.js"></script>
-</head>
-<body>
-  <div class="container">
-    <h1>Bem-vindo à Roque Publicidade</h1>
-    <p>Escolha a sua localização para continuar:</p>
-    <div class="botoes">
-      <a href="br/index.html" class="btn">🇧🇷 Brasil</a>
-      <a href="pt/index.html" class="btn">🇵🇹 Portugal</a>
-    </div>
-  </div>
-</body>
-</html>
+  <meta charset="UTF-8">
+  <title>Redirecionando...</title>
+  <script>
+    fetch('https://ipapi.co/json/')
+      .then(res => res.json())
+      .then(data => {
+        if (data.country === 'BR') {
+          window.location.href = '/br/';
+        } else {
+          window.location.href = '/pt/';
+        }
+      })
