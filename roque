@@ -1,0 +1,11 @@
+roquepublicidade-site/
+│
+├── index.html  ← (essa é a página com botão BR / PT ou redirecionamento automático)
+├── redirecionamento.js
+├── style.css
+│
+├── br/
+│   └── index.html ← (versão brasileira)
+│
+└── pt/
+    └── index.html ← (versão portuguesa)
