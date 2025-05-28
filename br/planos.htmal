@@ -80,6 +80,28 @@
     a.voltar:hover {
       text-decoration: underline;
     }
+
+    .whatsapp-float {
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      font-size: 28px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 50px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #128c7e;
+    }
   </style>
 </head>
 <body>
@@ -125,5 +147,11 @@
   </div>
 
   <a class="voltar" href="/br/index.html">← Voltar para o início</a>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="https://wa.me/351910224301" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+    💬
+  </a>
 </body>
 </html>
+
