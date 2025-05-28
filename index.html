@@ -1,8 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Redirecionando...</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <h1>Estamos a redirecioná-lo...</h1>
+  <p>Por favor, aguarde um momento.</p>
+
   <script>
     fetch('https://ipapi.co/json/')
       .then(res => res.json())
@@ -13,3 +33,10 @@
           window.location.href = '/pt/';
         }
       })
+      .catch(() => {
+        // Se a API falhar, redireciona para PT como padrão
+        window.location.href = '/pt/';
+      });
+  </script>
+</body>
+</html>
